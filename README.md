@@ -210,38 +210,29 @@ game HelloWorld;
 
 HelloWorld.createScreen(200, 40);
 
-rect\* hw = new rect("Hello World", colorsy(colorsy::WHITE,
+rect* hw = new rect("Hello World", colorsy(colorsy::WHITE,
 colorsy::BLACK), 0, 0);
 
 HelloWorld.addElement(hw);
 
 while (true) {
+  HelloWorld.clearScreen();
+  HelloWorld.elements[0]->draw(HelloWorld.screen);
 
-HelloWorld.clearScreen();
+  if (game::GetKey('A')) {
+    hw->xpos -= 1;
+  }
 
-HelloWorld.elements\[0\]-\>draw(HelloWorld.screen);
+  if (game::GetKey(\'D\') {
+    hw->xpos += 1;
+  }
 
-if (game::GetKey(\'A\')) {
+  if (game::GetKeyDown(VK_SPACE, 100) {
+    game::nuke();
+  }
 
-hw-\>xpos -= 1;
-
-}
-
-if (game::GetKey(\'D\') {
-
-hw-\>xpos += 1;
-
-}
-
-if (game::GetKeyDown(VK_SPACE, 100) {\
-game::nuke();
-
-}
-
-Sleep(50);
-
-}
-
+  Sleep(50);
+  }
 }
 ```
 
