@@ -205,33 +205,30 @@ ready to create your first game, let's look at an example with Hello World;\
 #include "VoonoPaeikh.hpp"
 
 int main () {
+  game HelloWorld;
+  HelloWorld.createScreen(200, 40);
 
-game HelloWorld;
+  rect* hw = new rect("Hello World", colorsy(colorsy::WHITE,
+  colorsy::BLACK), 0, 0);
+  HelloWorld.addElement(hw);
 
-HelloWorld.createScreen(200, 40);
+  while (true) {
+    HelloWorld.clearScreen();
+    HelloWorld.elements[0]->draw(HelloWorld.screen);
 
-rect* hw = new rect("Hello World", colorsy(colorsy::WHITE,
-colorsy::BLACK), 0, 0);
+    if (game::GetKey('A')) {
+      hw->xpos -= 1;
+    }
 
-HelloWorld.addElement(hw);
+    if (game::GetKey('D') {
+      hw->xpos += 1;
+    }
 
-while (true) {
-  HelloWorld.clearScreen();
-  HelloWorld.elements[0]->draw(HelloWorld.screen);
+    if (game::GetKeyDown(VK_SPACE, 100) {
+      game::nuke();
+    }
 
-  if (game::GetKey('A')) {
-    hw->xpos -= 1;
-  }
-
-  if (game::GetKey('D') {
-    hw->xpos += 1;
-  }
-
-  if (game::GetKeyDown(VK_SPACE, 100) {
-    game::nuke();
-  }
-
-  Sleep(50);
+    Sleep(50);
   }
 }
 ```
