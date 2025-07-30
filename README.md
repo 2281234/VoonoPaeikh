@@ -223,7 +223,7 @@ while (true) {
     hw->xpos -= 1;
   }
 
-  if (game::GetKey(\'D\') {
+  if (game::GetKey('D') {
     hw->xpos += 1;
   }
 
