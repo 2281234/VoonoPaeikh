@@ -3,7 +3,7 @@
 When connecting VoonoPaeikh, the standard libraries
 iostream, vector, windows.h, string, map, fstream, algorithm, map are also connected.
 VoonoPaeikh has 6 classes for work:\
-1. **Colorsy** -- class for storing the color of the symbol.\
+1. **colorsy** -- class for storing the color of the symbol.\
 ***Fields***:
 
 \
@@ -18,7 +18,7 @@ bright white.
 ***Methods*** :
 
 \
-**colorsy() ** -- colorsy constructor with a white symbol and a black background;
+**colorsy()** -- colorsy constructor with a white symbol and a black background;
 
 **colorsy(unsigned char colorSymbol, unsigned char backColor)** --
 a constructor that takes the symbol color and the background color (colorSymbol and backColor, respectively);
@@ -46,7 +46,7 @@ and back fields of both operants match;
 **cell(unsigned char symb, unsigned char colorSymbol, unsigned char
 backColor)** -- constructor with symbol, symbol color, and background color;
 
-**cell() ** -- constructor that sets symbol = \' \'; color.symbol =
+**cell()** -- constructor that sets symbol = \' \'; color.symbol =
 colorsy::WHITE; color.back = colorsy::BLACK;
 
 **cell(unsigned char symb, colorsy clr)** -- constructor that takes
@@ -196,7 +196,7 @@ elements;
 **static void nuke()** -- terminates the program with an error
 -1073741819(0xC0000005) Access Violation;
 
-There is no logic for **operators **.
+There is no logic for **operators**.
 
 After familiarizing yourself with the standard classes of the VoonoPaeikh library, you are
 ready to create your first game, let's look at an example with Hello World;\
