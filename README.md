@@ -1,4 +1,4 @@
-[VoonoPaeikh_logo](VoonoPaeikh.png)
+![VoonoPaeikh_logo](VoonoPaeikh.png)
 
 # VoonoPaeikh -- C++ library for creating console games.
 
