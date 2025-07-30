@@ -1,4 +1,4 @@
-#VoonoPaeikh -- C++ library for creating console games.
+# VoonoPaeikh -- C++ library for creating console games.
 
 When connecting VoonoPaeikh, the standard libraries
 iostream, vector, windows.h, string, map, fstream, algorithm, map are also connected.
