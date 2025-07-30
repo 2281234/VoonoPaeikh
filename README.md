@@ -35,7 +35,7 @@ and back fields of both operants match;
 
 2\. **cell** -- a class for storing a screen cell.\
 
-***Fields***:
+***Fields:***
 
 \
 **unsigned char symbol** -- stores the symbol written to the cell;\
@@ -65,7 +65,7 @@ Operator= sets symbol and color fields the same as the second operant.
 **std::vector\<std::vector\<colorsy\>\> color** -- two-dimensional vector for
 element colors.
 
-*** Methods***:
+***Methods:***
 
 **element()** -- sets coordinates 0;0 ;
 
@@ -101,11 +101,11 @@ make transparent parts of elements.
 
 4\. **rect** -- child class element for single-line text.
 
-***Fields***:
+***Fields:***
 
 **std::string text** -- text.
 
-***Methods*** :
+***Methods:***
 
 **rect(std:: texta, std::vector\<colorsy\>& colora, int x, int y)** --
 constructor accepting text, two-dimensional vector colory and coordinates;
@@ -136,11 +136,11 @@ the sprite
 std::vector\<std::vector\<colorsy\>\> colora, int x, int y)** -- image =
 texta; color = colora; coordinates = x;y ;
 
-**sprit() **-- only coordinates 0;0 are set;
+**sprit()** -- only coordinates 0;0 are set;
 
-sprit(std::vector\<std::string\> a, colorsy b, int x, int y);
+**sprit(std::vector\<std::string\> a, colorsy b, int x, int y)**
 
-sprit(int x, int y);
+**sprit(int x, int y)**
 
 **void loadImpage(std::string filename)** -- loads a text file into
 impage (any text format is suitable);
@@ -149,7 +149,7 @@ impage (any text format is suitable);
 
 **int height()** -- returns the height of the image;
 
-operators (=, == and !=) ignore coordinates, i.e. the = operator assigns
+**operators** (=, == and !=) ignore coordinates, i.e. the = operator assigns
 only the impage and color fields, and the == and != operators compare only the
 impage and color fields;
 
