@@ -1,3 +1,5 @@
+[](VoonoPaeikh.png)
+
 # VoonoPaeikh -- C++ library for creating console games.
 
 When connecting VoonoPaeikh, the standard libraries
