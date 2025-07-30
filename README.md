@@ -15,10 +15,10 @@ there are also static constants for 16 colors, from black to
 bright white.
 
 \
-***Methods***:
+***Methods*** :
 
 \
-**colorsy() **-- colorsy constructor with a white symbol and a black background;
+**colorsy() ** -- colorsy constructor with a white symbol and a black background;
 
 **colorsy(unsigned char colorSymbol, unsigned char backColor)** --
 a constructor that takes the symbol color and the background color (colorSymbol and backColor, respectively);
@@ -39,14 +39,14 @@ and back fields of both operants match;
 
 \
 **unsigned char symbol** -- stores the symbol written to the cell;\
-**colorsy color **-- stores the cell color.
+**colorsy color ** -- stores the cell color.
 
 ***Methods:***
 
 **cell(unsigned char symb, unsigned char colorSymbol, unsigned char
 backColor)** -- constructor with symbol, symbol color, and background color;
 
-**cell() **-- constructor that sets symbol = \' \'; color.symbol =
+**cell() ** -- constructor that sets symbol = \' \'; color.symbol =
 colorsy::WHITE; color.back = colorsy::BLACK;
 
 **cell(unsigned char symb, colorsy clr)** -- constructor that takes
@@ -105,7 +105,7 @@ make transparent parts of elements.
 
 **std::string text** -- text.
 
-***Methods***:
+***Methods*** :
 
 **rect(std:: texta, std::vector\<colorsy\>& colora, int x, int y)** --
 constructor accepting text, two-dimensional vector colory and coordinates;
