@@ -201,6 +201,7 @@ There is no logic for **operators**.
 After familiarizing yourself with the standard classes of the VoonoPaeikh library, you are
 ready to create your first game, let's look at an example with Hello World;\
 
+```cpp
 #include "VoonoPaeikh.hpp"
 
 int main () {
@@ -242,6 +243,7 @@ Sleep(50);
 }
 
 }
+```
 
 1\. To get started, you need to include the header file of the library
 **VoonoPaeikh.hpp**
