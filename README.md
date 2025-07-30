@@ -15,7 +15,7 @@ there are also static constants for 16 colors, from black to
 bright white.
 
 \
-***Methods*** :
+***Methods:***
 
 \
 **colorsy()** -- colorsy constructor with a white symbol and a black background;
@@ -39,7 +39,7 @@ and back fields of both operants match;
 
 \
 **unsigned char symbol** -- stores the symbol written to the cell;\
-**colorsy color ** -- stores the cell color.
+**colorsy color** -- stores the cell color.
 
 ***Methods:***
 
