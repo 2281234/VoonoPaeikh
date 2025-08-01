@@ -19,7 +19,7 @@ void EnableAnsiColors() {
 std::map<int, time_t> game::timeOfPress;
 std::map<int, bool> game::keyIsPressed;
 
-// Добавим функцию для скрытия/показа курсора
+// Г„Г®ГЎЕ•ГўДЌД› ГґГіГ­Д™Г¶ДЌЕЈ Г¤Г«Л™ Е„Д™Д‘Е±Е€ДЌЛ™/ДЏГ®Д™Е•Г§Е• Д™ГіД‘Е„Г®Д‘Е•
 void ShowConsoleCursor(bool showFlag) {
     HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cursorInfo;
@@ -52,22 +52,22 @@ void ShowConsoleCursor(bool showFlag) {
     }
 
 std::map<unsigned char, std::string> SYMBOL_COLOR_TO_STR = {
-    {colorsy::BLACK, "\x1b[30m"},    // Черный
-    {colorsy::BLUE, "\x1b[34m"},     // Синий
-    {colorsy::GREEN, "\x1b[32m"},    // Зеленый
-    {colorsy::AQUA, "\x1b[36m"},     // Голубой (Циан)
-    {colorsy::RED, "\x1b[31m"},      // Красный
-    {colorsy::PURPLE, "\x1b[35m"},   // Пурпурный (Магента)
-    {colorsy::YELLOW, "\x1b[33m"},   // Желтый
-    {colorsy::WHITE, "\x1b[37m"},    // Белый
-    {colorsy::GREY, "\x1b[90m"},     // Серый (Ярко-черный, чаще используется для серого)
-    {colorsy::LI_BLUE, "\x1b[94m"},  // Ярко-синий
-    {colorsy::LI_GREEN, "\x1b[92m"}, // Ярко-зеленый
-    {colorsy::LI_AQUA, "\x1b[96m"},  // Ярко-голубой
-    {colorsy::LI_RED, "\x1b[91m"},   // Ярко-красный
-    {colorsy::LI_PURPLE, "\x1b[95m"},// Ярко-пурпурный
-    {colorsy::LI_YELLOW, "\x1b[93m"},// Ярко-желтый
-    {colorsy::BR_WHITE, "\x1b[97m"}  // Ярко-белый
+    {colorsy::BLACK, "\x1b[30m"},    // Г—ДєД‘Г­Е±Г©
+    {colorsy::BLUE, "\x1b[34m"},     // ЕѓДЌГ­ДЌГ©
+    {colorsy::GREEN, "\x1b[32m"},    // Г‡ДєГ«ДєГ­Е±Г©
+    {colorsy::AQUA, "\x1b[36m"},     // Д‚Г®Г«ГіГЎГ®Г© (Г–ДЌЕ•Г­)
+    {colorsy::RED, "\x1b[31m"},      // ДД‘Е•Е„Г­Е±Г©
+    {colorsy::PURPLE, "\x1b[35m"},   // ДЋГіД‘ДЏГіД‘Г­Е±Г© (ДљЕ•ДѓДєГ­Е€Е•)
+    {colorsy::YELLOW, "\x1b[33m"},   // Д†ДєГ«Е€Е±Г©
+    {colorsy::WHITE, "\x1b[37m"},    // ГЃДєГ«Е±Г©
+    {colorsy::GREY, "\x1b[90m"},     // ЕѓДєД‘Е±Г© (ГџД‘Д™Г®-Г·ДєД‘Г­Е±Г©, Г·Е•ЕЇДє ДЌЕ„ДЏГ®Г«ГјГ§ГіДєЕ€Е„Л™ Г¤Г«Л™ Е„ДєД‘Г®ДѓГ®)
+    {colorsy::LI_BLUE, "\x1b[94m"},  // ГџД‘Д™Г®-Е„ДЌГ­ДЌГ©
+    {colorsy::LI_GREEN, "\x1b[92m"}, // ГџД‘Д™Г®-Г§ДєГ«ДєГ­Е±Г©
+    {colorsy::LI_AQUA, "\x1b[96m"},  // ГџД‘Д™Г®-ДѓГ®Г«ГіГЎГ®Г©
+    {colorsy::LI_RED, "\x1b[91m"},   // ГџД‘Д™Г®-Д™Д‘Е•Е„Г­Е±Г©
+    {colorsy::LI_PURPLE, "\x1b[95m"},// ГџД‘Д™Г®-ДЏГіД‘ДЏГіД‘Г­Е±Г©
+    {colorsy::LI_YELLOW, "\x1b[93m"},// ГџД‘Д™Г®-Д‡ДєГ«Е€Е±Г©
+    {colorsy::BR_WHITE, "\x1b[97m"}  // ГџД‘Д™Г®-ГЎДєГ«Е±Г©
 };
 
 std::map<char, unsigned char> CHAR_TO_COLOR = {
@@ -87,25 +87,26 @@ std::map<char, unsigned char> CHAR_TO_COLOR = {
     {'d', 13},
     {'e', 14},
     { 'f', 15}
+    {' ', 0}
 };
 
 std::map<unsigned char, std::string> BACK_COLOR_TO_STR = {
-    {colorsy::BLACK, "\x1b[40m"},    // Черный фон
-    {colorsy::BLUE, "\x1b[44m"},     // Синий фон
-    {colorsy::GREEN, "\x1b[42m"},    // Зеленый фон
-    {colorsy::AQUA, "\x1b[46m"},     // Голубой (Циан) фон
-    {colorsy::RED, "\x1b[41m"},      // Красный фон
-    {colorsy::PURPLE, "\x1b[45m"},   // Пурпурный (Магента) фон
-    {colorsy::YELLOW, "\x1b[43m"},   // Желтый фон
-    {colorsy::WHITE, "\x1b[47m"},    // Белый фон
-    {colorsy::GREY, "\x1b[100m"},    // Серый фон (Ярко-черный фон)
-    {colorsy::LI_BLUE, "\x1b[104m"}, // Ярко-синий фон
-    {colorsy::LI_GREEN, "\x1b[102m"},// Ярко-зеленый фон
-    {colorsy::LI_AQUA, "\x1b[106m"}, // Ярко-голубой фон
-    {colorsy::LI_RED, "\x1b[101m"},  // Ярко-красный фон
-    {colorsy::LI_PURPLE, "\x1b[105m"},// Ярко-пурпурный фон
-    {colorsy::LI_YELLOW, "\x1b[103m"},// Ярко-желтый фон
-    {colorsy::BR_WHITE, "\x1b[107m"} // Ярко-белый фон
+    {colorsy::BLACK, "\x1b[40m"},    // Г—ДєД‘Г­Е±Г© ГґГ®Г­
+    {colorsy::BLUE, "\x1b[44m"},     // ЕѓДЌГ­ДЌГ© ГґГ®Г­
+    {colorsy::GREEN, "\x1b[42m"},    // Г‡ДєГ«ДєГ­Е±Г© ГґГ®Г­
+    {colorsy::AQUA, "\x1b[46m"},     // Д‚Г®Г«ГіГЎГ®Г© (Г–ДЌЕ•Г­) ГґГ®Г­
+    {colorsy::RED, "\x1b[41m"},      // ДД‘Е•Е„Г­Е±Г© ГґГ®Г­
+    {colorsy::PURPLE, "\x1b[45m"},   // ДЋГіД‘ДЏГіД‘Г­Е±Г© (ДљЕ•ДѓДєГ­Е€Е•) ГґГ®Г­
+    {colorsy::YELLOW, "\x1b[43m"},   // Д†ДєГ«Е€Е±Г© ГґГ®Г­
+    {colorsy::WHITE, "\x1b[47m"},    // ГЃДєГ«Е±Г© ГґГ®Г­
+    {colorsy::GREY, "\x1b[100m"},    // ЕѓДєД‘Е±Г© ГґГ®Г­ (ГџД‘Д™Г®-Г·ДєД‘Г­Е±Г© ГґГ®Г­)
+    {colorsy::LI_BLUE, "\x1b[104m"}, // ГџД‘Д™Г®-Е„ДЌГ­ДЌГ© ГґГ®Г­
+    {colorsy::LI_GREEN, "\x1b[102m"},// ГџД‘Д™Г®-Г§ДєГ«ДєГ­Е±Г© ГґГ®Г­
+    {colorsy::LI_AQUA, "\x1b[106m"}, // ГџД‘Д™Г®-ДѓГ®Г«ГіГЎГ®Г© ГґГ®Г­
+    {colorsy::LI_RED, "\x1b[101m"},  // ГџД‘Д™Г®-Д™Д‘Е•Е„Г­Е±Г© ГґГ®Г­
+    {colorsy::LI_PURPLE, "\x1b[105m"},// ГџД‘Д™Г®-ДЏГіД‘ДЏГіД‘Г­Е±Г© ГґГ®Г­
+    {colorsy::LI_YELLOW, "\x1b[103m"},// ГџД‘Д™Г®-Д‡ДєГ«Е€Е±Г© ГґГ®Г­
+    {colorsy::BR_WHITE, "\x1b[107m"} // ГџД‘Д™Г®-ГЎДєГ«Е±Г© ГґГ®Г­
 };
 
 
@@ -371,7 +372,7 @@ std::map<unsigned char, std::string> BACK_COLOR_TO_STR = {
     void sprit::draw(std::vector<std::vector<cell>>& screen)  {
         for (int i = 0; i < image.size(); i++) {
             for (int j = 0; j < image[i].size(); j++) {
-                if (i < color.size() && j < color[i].size() && // Проверка на допустимый индекс color
+                if (i < color.size() && j < color[i].size() && // ДЋД‘Г®ГўДєД‘Д™Е• Г­Е• Г¤Г®ДЏГіЕ„Е€ДЌД›Е±Г© ДЌГ­Г¤ДєД™Е„ color
                     j + xpos < screen[i].size() && i + ypos < screen.size() &&
                     image[i][j] != ',' && j + xpos >= 0 && i + ypos >= 0) {
                     screen[i + ypos][j + xpos] = cell(image[i][j], color[i][j]);
@@ -515,7 +516,7 @@ std::map<unsigned char, std::string> BACK_COLOR_TO_STR = {
     void game::nuke() {
         std::vector<int> aaa;
         std::cout << aaa[1];
-        // данный метод предназначен для завершения программы ошибкой
+        // Г¤Е•Г­Г­Е±Г© Д›ДєЕ€Г®Г¤ ДЏД‘ДєГ¤Г­Е•Г§Г­Е•Г·ДєГ­ Г¤Г«Л™ Г§Е•ГўДєД‘Е™ДєГ­ДЌЛ™ ДЏД‘Г®ДѓД‘Е•Д›Д›Е± Г®Е™ДЌГЎД™Г®Г©
     }
 
 
